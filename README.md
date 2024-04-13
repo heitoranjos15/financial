@@ -8,7 +8,6 @@ I want to project future months too, to see how much money I'll have to spend.
 
 
 # task
-- [] What Language?
-- [] Purchase
-- [] Reports
-- [] Future months
+- [] Expenses
+- [] Incomes
+- [] Bank
