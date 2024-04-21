@@ -8,6 +8,9 @@ I want to project future months too, to see how much money I'll have to spend.
 
 
 # task
-- [] Expenses
-- [] Incomes
-- [] Bank
+- [x] Expenses
+- [x] Incomes
+- [x] Bank
+- [] Save on database
+    - [] code structure
+    - [] dockerize

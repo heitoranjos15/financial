@@ -1,0 +1,29 @@
+CREATE TABLE bank(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  amount NUMERIC NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  status INT,
+  PRIMARY KEY (id)
+);
+
+create TABLE cycles(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  total_expend NUMERIC NOT NULL,
+  started_at TIMESTAMP NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE transactions(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  amount NUMERIC NOT NULL,
+  cycle_id INT NOT NULL,
+  transaction_type INT NOT NULL,
+  category VARCHAR(20) NOT NULL,
+  description VARCHAR(255) NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+  PRIMARY KEY(id),
+  CONSTRAINT fk_cycle FOREIGN KEY(cycle_id) REFERENCES cycles(id)
+);

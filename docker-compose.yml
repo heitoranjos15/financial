@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  # app:
+  #   build: .
+  #   depends_on:
+  #     - db
+  #   command: go run .
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+    ports:
+      - "5432:5432"
+    volumes:
+      - ../config/.cache/database/:/var/lib/mysql
+      - ../config/dumps/:/dumps
+ 

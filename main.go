@@ -5,6 +5,8 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
+
+  "financial/adapters/postgres"
 )
 
 const (
@@ -125,6 +127,7 @@ func (m model) View() string {
 }
 
 func main() {
+  postgres.RunMigrations()
 	p := tea.NewProgram(initialModel())
 	if _, err := p.Run(); err != nil {
 		fmt.Printf("Alas, there's been an error: %v", err)
