@@ -8,9 +8,16 @@ I want to project future months too, to see how much money I'll have to spend.
 
 
 # task
-- [x] Expenses
-- [x] Incomes
-- [x] Bank
-- [] Save on database
-    - [] code structure
-    - [] dockerize
+- [] TUI 
+
+
+
+### Problem
+
+The problem I have is:
+I want to have customize pages, each one will have their one view.
+What is breaking my idea is: App doens't get cursor and fields from Default Page.
+And if I make
+
+- Cursor and fields are not viable using pages, app doenst seen to update the view.
+- 

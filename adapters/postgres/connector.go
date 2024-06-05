@@ -13,10 +13,12 @@ import (
 	_ "github.com/golang-migrate/migrate/v4/source/file"
 )
 
-func GetConnection(context context.Context) *pgxpool.Pool {
-	databaseURL := "localhost"
 
-	conn, err := pgxpool.New(context, "postgres"+databaseURL)
+
+func GetConnection(context context.Context) *pgxpool.Pool {
+  databaseURL := "root:root@localhost:5432/financial?sslmode=disable"
+
+  conn, err := pgxpool.New(context, "postgres://"+databaseURL)
 
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Unable to connect to database: %v\n", err)
